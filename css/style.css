@@ -1,0 +1,112 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+* {margin: 0; padding: 0; outline: 0;}
+
+html{
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+  font-size: 12px;
+  vertical-align: center;
+  height: 100%;
+}
+
+#content{
+  margin-top: 70px;
+}
+
+.home, .gallery, .contact{
+  height:400px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  font-size: 5em;
+}
+
+.service, .download{
+  height:400px;
+  background-color: #f3cb76;
+  text-align: center;
+  font-size: 5em;
+}
+
+.bluebox, .graybox{
+  height: 40px;
+  width: 40px;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.bluebox
+{
+  background-color: #547cbb;
+}
+
+.graybox{
+  background-color: #6b6b6b;
+}
+
+.bluebox a, .graybox a{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  color: #fff;
+}
+
+li.collapse-link{
+  display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar{
+      padding-left: 6%;
+      padding-right: 6%;
+    }
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-inner {
+      min-height: 0px;
+    }
+
+    .navbar-brand,
+    .navbar-nav li a {
+        line-height: 70px;
+        height: 70px;
+        padding-top: 0;
+    }
+
+    #navbar
+    {
+      position: relative;
+      left: -50px;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+  .bluebox, .graybox{
+    display: none;
+  }
+
+  li.collapse-link{
+    display: block;
+  }
+}
