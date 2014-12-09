@@ -18,6 +18,8 @@ body {
 
 #content{
   margin-top: 70px;
+  overflow: hidden;
+  font-size: 14px;
 }
 
 #carousel-home{
@@ -41,7 +43,7 @@ div.item{
 }
 
 .gallery, .contact, .service, .download{
-  padding-top: 3em;
+  padding: 3em 1em 3em 1em;
   min-height:500px;
   background-color: #f3cb76;
   text-align: center;
@@ -83,10 +85,19 @@ li.collapse-link{
   font-size: 2em;
 }
 
+.service-header{
+  font-size:4em;
+}
+
+.service-title{
+  font-size:1.2em; 
+  font-weight:700;
+}
+
 @media (min-width: 768px) {
     .navbar{
-      padding-left: 6%;
-      padding-right: 6%;
+      padding-left: 5%;
+      padding-right: 5%;
     }
     .navbar .navbar-nav {
         display: inline-block;
@@ -119,11 +130,23 @@ li.collapse-link{
 }
 
 @media (max-width: 767px) {
+  #content{
+    margin-top: 50px;
+  }
+
   .bluebox, .graybox{
     display: none;
   }
 
   li.collapse-link{
     display: block;
+  }
+
+  .service-header{
+    font-size: 2em;
+  }
+
+  .service-mobile-hidden{
+    display: none;
   }
 }
