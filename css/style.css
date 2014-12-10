@@ -110,23 +110,43 @@ li.collapse-link{
 
 .gallery-image-box{
   width:100%;
+  padding: 0;
 }
 
 .gallery-image{
   height: 200px;
   overflow: hidden;
   text-align: center;
-  background-color: #a7a7a7;
+  background-color: #262626;
 }
 
 .gallery-image img{
   width: 100%;
+  opacity: 0.2;
   height: auto;
+}
+
+.gallery-image img:hover{
+  opacity: 1;
+}
+
+.gallery-image:hover img{
+  opacity: 1;
 }
 
 .gallery-image:nth-child(odd)
 {
-  background-color: #d4d4d4;
+  background-color: #242424;
+}
+
+.gallery-image-caption{
+  position: absolute;
+  font-size: 2em;
+  color:#fff;
+  top:40%;
+  left:0;
+  right: 0;
+  text-align: center;
 }
 
 #imagelightbox
@@ -145,11 +165,16 @@ li.collapse-link{
 
 .panel-heading{
   text-align: left;
+  cursor: pointer;
 }
 
 .panel-heading i{
   float: right;
   padding-top: 2px;
+}
+
+.panel-default{
+  border: none;
 }
 
 .footer{
@@ -223,6 +248,12 @@ li.collapse-link{
 
   td{
     font-size: 1em;
+  }
+
+  #imagelightbox-close
+  {
+    top: 1.25em; /* 20 */
+    right: 1.25em; /* 20 */
   }
 }
 
