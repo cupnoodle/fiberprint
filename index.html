@@ -331,24 +331,14 @@
       </div>
       <div class="section contact">
         <p class="section-header">Contact</p>
-        <p class="mobile-hidden" style="font-size:2em;">
+        <p style="font-size:2em;">
           To make an order or inquiries, please get in touch with us.<br>
           We would love to hear from you.<br>
-          <br><br>
+          
         </p>
-        <p style="font-size:1.3em;">
-          <img src="img/logo_mockup.png" height="30px"></img><br><br>
-          19B Jalan PPZ1, Pusat Perniagaan Zamrud, 08000 Sungai Petani, Kedah, Malaysia<br><br>
-          <table style="margin-left:auto; margin-right:auto;">
-            <tr><td>Office</td><td>+604 584 9764</td></tr>
-            <tr><td>Fax</td><td>+604 584 9764</td></tr>
-            <tr><td>Mobile &amp; Whatsapp</td><td>+6012 584 9764</td></tr>
-          </table>
-        </p>
-        <br><br>
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="max-width:1000px; margin-left:auto; margin-right: auto;">
             <div class="panel panel-default">
-              <p class="section-header">We would love to hear from you...</p>
+              <p class="section-header"></p>
               <div class="formContainer" style="max-width: 1000px;">
                 <div class="panel-body">
                   <form class="form-horizontal" role="form">
@@ -393,6 +383,17 @@
             </div>
           </div>
           <!-- end panel -->
+
+        <p style="font-size:1.3em;">
+          <img src="img/logo_mockup.png" height="30px"></img><br><br>
+          19B Jalan PPZ1, Pusat Perniagaan Zamrud, 08000 Sungai Petani, Kedah, Malaysia<br><br>
+          <table style="margin-left:auto; margin-right:auto;">
+            <tr><td>Office</td><td>+604 584 9764</td></tr>
+            <tr><td>Fax</td><td>+604 584 9764</td></tr>
+            <tr><td>Mobile &amp; Whatsapp</td><td>+6012 584 9764</td></tr>
+          </table>
+        </p>
+        <br><br>
       </div>
       <div class="section faq">
         <p class="section-header">Frequently Asked Questions</p>
@@ -474,33 +475,34 @@
         $( '#imagelightbox-close' ).remove();
       }
 
-      $(".navbar-nav a[href^='#']").click(function(){
-        var scrollLocation = $(this).attr('href');
-        scrollLocation = scrollLocation.substr(1);
-        $('html, body').animate({
-          scrollTop: $("." + scrollLocation).offset().top - 70
-        }, 1000);
-      });
+      $(document).ready(function(){
+        $(".navbar-nav a[href^='#']").click(function(){
+          var scrollLocation = $(this).attr('href');
+          scrollLocation = scrollLocation.substr(1);
+          $('html, body').animate({
+            scrollTop: $("." + scrollLocation).offset().top - 70
+          }, 1000);
+        });
+  
+        $(".panel-default").on("click",".panel-heading", function(){
+          var isCollapsed = $(this).hasClass('collapsed');
+          if(isCollapsed)
+          {
+            $(this).find('i').attr('class', 'fa fa-minus');
+          }
+          else
+          {
+            $(this).find('i').attr('class', 'fa fa-plus');
+          }
+        });
+    
+            var instanceC = $( '.gallery-image-box a' ).imageLightbox({
+              onStart:    function() { overlayOn(); closeButtonOn(instanceC); },
+              onEnd:      function() { overlayOff(); closeButtonOff(); },
+              quitOnEnd:  true,
+              quitOnImgClick: true
+            });
 
-      $(".panel-heading").click(function(){
-        var isCollapsed = $(this).hasClass('collapsed');
-        if(isCollapsed)
-        {
-          $(this).find('i').removeClass('fa-plus').addClass('fa-minus');
-        }
-        else
-        {
-          $(this).find('i').removeClass('fa-minus').addClass('fa-plus');
-        }
-      });
-      $( function()
-      {
-          var instanceC = $( '.gallery-image-box a' ).imageLightbox({
-            onStart:    function() { overlayOn(); closeButtonOn(instanceC); },
-            onEnd:      function() { overlayOff(); closeButtonOff(); },
-            quitOnEnd:  true,
-            quitOnImgClick: true
-          });
       });
       /*$('.section').waypoint(function() {
         $('.navbar-nav li').removeClass('active');
