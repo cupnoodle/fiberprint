@@ -9,6 +9,56 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+  <style>
+
+    /* "CLOSE" BUTTON */
+
+    #imagelightbox-close
+    {
+      width: 2.5em; /* 40 */
+      height: 2.5em; /* 40 */
+      text-align: left;
+      background-color: #666;
+      border-radius: 50%;
+      position: fixed;
+      z-index: 10002;
+      top: 2.5em; /* 40 */
+      right: 2.5em; /* 40 */
+
+      -webkit-transition: color .3s ease;
+      transition: color .3s ease;
+    }
+      #imagelightbox-close:hover,
+      #imagelightbox-close:focus
+      {
+        background-color: #111;
+      }
+      #imagelightbox-close:before,
+      #imagelightbox-close:after
+      {
+        width: 2px;
+        background-color: #fff;
+        content: '';
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        left: 50%;
+        margin-left: -1px;
+      }
+      #imagelightbox-close:before
+      {
+        -webkit-transform: rotate( 45deg );
+        -ms-transform: rotate( 45deg );
+        transform: rotate( 45deg );
+      }
+      #imagelightbox-close:after
+      {
+        -webkit-transform: rotate( -45deg );
+        -ms-transform: rotate( -45deg );
+        transform: rotate( -45deg );
+      }
+
+  </style>
   </head>
   <body>
     <!-- Static navbar -->
@@ -85,18 +135,19 @@
       <div class="section service">
         <p class="section-header">OUR SERVICES<br><br></p>
         <p class="service-header"> WHY &nbsp;<span style="font-weight:700;">FIBER</span><span style="font-weight:400;">PRINT ?</span> <br></p>
-        <p class="service-mobile-hidden" style="font-size:2em;">FIBERPRINT offers advanced digital printing services which are at<br> high quality and affordable price for the T-shirt &amp; garment products.</p>
+        <p class="mobile-hidden" style="font-size:2em;">FIBERPRINT offers advanced digital printing services which are at<br> high quality and affordable price for the T-shirt &amp; garment products.</p>
+        <!-- start row-->
         <div class="row" style="margin-top:4em;">
-          <div class="col-md-4">
-            <p class="service-title" style="font-size:1.2em; font-weight:700;">High Quality Digital Printing<br></p>
+          <div class="col-md-4 col-xs-6">
+            <p class="service-title" style="color:#e8873b;">High Quality Digital Printing<br></p>
             <p>
               High resolution printing and colour vibrancy.<br>
               Our printer capable of printing realistic photos, <br>
               water colour effect, 3D effect of full colour printing.
             </p>
           </div>
-          <div class="col-md-4">
-             <p class="service-title">Industry Leader Equipments<br></p>
+          <div class="col-md-4 col-xs-6">
+             <p class="service-title" style="color:#2a93bb;">Industry Leader Equipments<br></p>
              <p>
               We use the best technology from industry leader of <br>
               digial direct to garment printer to print your clothes. <br>
@@ -104,8 +155,8 @@
               impressions last and your products stands out.
              </p>
           </div>
-          <div class="col-md-4">
-             <p class="service-title">No Minimum Order Required!<br></p>
+          <div class="col-md-4 col-xs-6">
+             <p class="service-title" style="color:#9049bb;">No Minimum Order Required!<br></p>
              <p>
               We accept order as low as 1 piece. Unlimited design <br>
               to print for per your order. We also accept large <br>
@@ -113,10 +164,11 @@
              </p>
           </div>
         </div>
-
+        <!--end row-->
+        <!--start row-->
         <div class="row" style="margin-top: 4em;">
-          <div class="col-md-4">
-            <p class="service-title">Multiple Garment Styles &amp; Colours<br></p>
+          <div class="col-md-4 col-xs-6">
+            <p class="service-title" style="color:#a73a7a;">Multiple Garment Styles &amp; Colours<br></p>
             <p>
               We have variety of garments styles and colours for you <br>
               to choose from. Mens, ladies and youth/kids t-shirts.<br>
@@ -125,16 +177,16 @@
               own t-shirt and we will do only the printing.
             </p>
           </div>
-          <div class="col-md-4">
-             <p class="service-title">Large Printing Size<br></p>
+          <div class="col-md-4 col-xs-6">
+             <p class="service-title" style="color:#c11528;">Large Printing Size<br></p>
              <p>
               With us you can print out your design from <br>
               A6, A5, A4, A3 and up to A2 size. <br>
               (594 x 420mm). That's BIG! 
              </p>
           </div>
-          <div class="col-md-4">
-             <p class="service-title">Delivery Worldwide<br></p>
+          <div class="col-md-4 col-xs-6">
+             <p class="service-title" style="color:#45bb25;">Delivery Worldwide<br></p>
              <p>
               We can deliver your order either you in <br>
               Malaysia or overseas using POS Laju, Gdex, <br>
@@ -143,12 +195,69 @@
              </p>
           </div>
         </div>
+        <!--end row -->
+      </div>
+      <!-- end home section-->
+      <div class="home-image-box">
       </div>
       <div class="section gallery">
-        gallery
+        <p class="section-header">GALLERY</p>
+        <p class="mobile-hidden" style="font-size:2em;">Feel free to check out some of our recent jobs and printing samples</p>
+      </div>
+      <!-- end gallery section -->
+      <div class="gallery-image-box">
+        <!-- start row -->
+        <div class="row">
+          <!-- first row -->
+          <div class="col-lg-3 col-sm-4 col-xs-6 gallery-image">
+            <a href="img/gallery1.png" data-imagelightbox="a"><img src="img/gallery1.png"></img></a>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-xs-6 gallery-image">
+            <a href="img/gallery2.png" data-imagelightbox="a"><img src="img/gallery2.png"></img></a>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-xs-6 gallery-image">
+            <a href="img/gallery1.png" data-imagelightbox="a"><img src="img/gallery1.png"></img></a>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-xs-6 gallery-image">
+            <a href="img/gallery2.png" data-imagelightbox="a"><img src="img/gallery2.png"></img></a>
+          </div>
+
+          <!--second row -->
+          <div class="col-lg-3 col-sm-4 col-xs-6 gallery-image">
+            <a href="img/gallery2.png" data-imagelightbox="a"><img src="img/gallery2.png"></img></a>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-xs-6 gallery-image">
+           <a href="img/gallery1.png" data-imagelightbox="a"><img src="img/gallery1.png"></img></a>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-6 gallery-image">
+            <a href="img/gallery2.png" data-imagelightbox="a"><img src="img/gallery2.png"></img></a>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-6 gallery-image">
+            <a href="img/gallery1.png" data-imagelightbox="a"><img src="img/gallery1.png"></img></a>
+          </div>
+        </div>
+        <!-- end row -->
       </div>
       <div class="section download">
-        download
+        <p class="section-header">DOWNLOAD<br><br></p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <p class="download-title">T-shirt Templates</p>
+            <p>
+              <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Mens</a>
+              <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Ladies</a> 
+              <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Kids</a>
+            </p>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <p class="download-title">T-shirt Styles &amp; Colours Brochure</p>
+            <p>
+              <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Mens</a>
+              <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Ladies</a> 
+              <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Kids</a>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="section contact">
         contact
@@ -158,7 +267,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
+    <script src="js/imagelightbox.min.js"></script>
     <script type="text/javascript">
       $(".navbar-nav a[href^='#']").click(function(){
         var scrollLocation = $(this).attr('href');
@@ -167,7 +276,13 @@
           scrollTop: $("." + scrollLocation).offset().top - 70
         }, 1000);
       });
-
+      $( function()
+      {
+          $( '.gallery-image-box a' ).imageLightbox({
+            quitOnEnd:  true,
+            quitOnImgClick: true
+          });
+      });
       /*$('.section').waypoint(function() {
         $('.navbar-nav li').removeClass('active');
         $('.menu_download').addClass('active');
