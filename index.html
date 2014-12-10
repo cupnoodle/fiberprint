@@ -9,60 +9,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-  <style>
-
-    /* "CLOSE" BUTTON */
-
-    #imagelightbox-close
-    {
-      width: 2.5em; /* 40 */
-      height: 2.5em; /* 40 */
-      text-align: left;
-      background-color: #666;
-      border-radius: 50%;
-      position: fixed;
-      z-index: 10002;
-      top: 2.5em; /* 40 */
-      right: 2.5em; /* 40 */
-
-      -webkit-transition: color .3s ease;
-      transition: color .3s ease;
-    }
-      #imagelightbox-close:hover,
-      #imagelightbox-close:focus
-      {
-        background-color: #111;
-      }
-      #imagelightbox-close:before,
-      #imagelightbox-close:after
-      {
-        width: 2px;
-        background-color: #fff;
-        content: '';
-        position: absolute;
-        top: 20%;
-        bottom: 20%;
-        left: 50%;
-        margin-left: -1px;
-      }
-      #imagelightbox-close:before
-      {
-        -webkit-transform: rotate( 45deg );
-        -ms-transform: rotate( 45deg );
-        transform: rotate( 45deg );
-      }
-      #imagelightbox-close:after
-      {
-        -webkit-transform: rotate( -45deg );
-        -ms-transform: rotate( -45deg );
-        transform: rotate( -45deg );
-      }
-
-  </style>
   </head>
   <body>
     <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="opacity:0.95;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -133,7 +83,7 @@
         <!--end carousel -->
       </div>
       <div class="section service">
-        <p class="section-header">OUR SERVICES<br><br></p>
+        <p class="section-header">Our Services<br><br></p>
         <p class="service-header"> WHY &nbsp;<span style="font-weight:700;">FIBER</span><span style="font-weight:400;">PRINT ?</span> <br></p>
         <p class="mobile-hidden" style="font-size:2em;">FIBERPRINT offers advanced digital printing services which are at<br> high quality and affordable price for the T-shirt &amp; garment products.</p>
         <!-- start row-->
@@ -201,7 +151,7 @@
       <div class="home-image-box">
       </div>
       <div class="section gallery">
-        <p class="section-header">GALLERY</p>
+        <p class="section-header">Gallery</p>
         <p class="mobile-hidden" style="font-size:2em;">Feel free to check out some of our recent jobs and printing samples</p>
       </div>
       <!-- end gallery section -->
@@ -239,7 +189,7 @@
         <!-- end row -->
       </div>
       <div class="section download">
-        <p class="section-header">DOWNLOAD<br><br></p>
+        <p class="section-header">Download<br><br></p>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <p class="download-title">T-shirt Templates</p>
@@ -256,12 +206,123 @@
               <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Ladies</a> 
               <a href="www.vulpes.pw" style="margin-right:2em;"><i class="fa fa-angle-right"></i>Kids</a>
             </p>
+            <br><br><br>
           </div>
         </div>
       </div>
-      <div class="section contact">
-        contact
+      <div class="contact-map">
+        <!-- GOOGLE MAP -->
+        <div id="map" style="height:450px;"></div>
+          <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+          <script type="text/javascript">
+            function mapinitialize() {
+              var latlng = new google.maps.LatLng(5.649024,100.49513);
+              var myOptions = {
+                zoom: 14,
+                center: latlng,
+                scrollwheel: false,
+                scaleControl: false,
+                disableDefaultUI: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+              var map = new google.maps.Map(document.getElementById("map"),myOptions);
+              
+              var image = "img/map_pin.png";
+              var marker = new google.maps.Marker({
+                map: map, 
+                icon: image,
+                position: map.getCenter()
+              });
+              
+              var contentString = '<b>Fiberprint Enterprise</b><br>19B Jalan PPZ1, Pusat Perniagaan Zamrud, 08000 Sungai Petani, Kedah, Malaysia';
+              var infowindow = new google.maps.InfoWindow({
+                content: contentString
+              });
+                    
+              google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+              });
+                      
+                
+            }
+            mapinitialize();
+          </script>
+        <!-- GOOGLE MAP -->
       </div>
+      <div class="section contact">
+        <p class="section-header">Contact</p>
+        <p style="font-size:2em;">
+          To make an order or inquiries, please get in touch with us.<br>
+          We would love to hear from you.<br>
+          <br><br>
+        </p>
+        <p style="font-size:1.3em;">
+          <img src="img/logo_mockup.png" height="30px"></img><br><br>
+          19B Jalan PPZ1, Pusat Perniagaan Zamrud, 08000 Sungai Petani, Kedah, Malaysia<br><br>
+          <table style="margin-left:auto; margin-right:auto;">
+            <tr><td>Office</td><td>+604 584 9764</td></tr>
+            <tr><td>Fax</td><td>+604 584 9764</td></tr>
+            <tr><td>Mobile &amp; Whatsapp</td><td>+6012 584 9764</td></tr>
+          </table>
+        </p>
+      </div>
+      <div class="section faq">
+        <p class="section-header">Frequently Asked Questions</p>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="max-width:1000px; margin-left:auto; margin-right: auto;">
+            <div class="panel panel-default">
+              <!-- modify the href in both .panel-heading and a tag -->
+              <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Question #1
+                  </a>
+                  <i style="float:right; padding-top:2px;" class="fa fa-plus"></i>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" href="#collapseTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Question #2
+                  </a>
+                  <i class="fa fa-plus"></i>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree" data-toggle="collapse" href="#collapseThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Question #3
+                  </a>
+                  <i style="float:right; padding-top:2px;" class="fa fa-plus"></i>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end panel group-->
+      </div>
+      <!-- end faq section -->
+    </div>
+    <!--end content -->
+    <div class="footer">
+      <span>Copyright &copy; 2014 - Fiberprint Enterprise</span>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
