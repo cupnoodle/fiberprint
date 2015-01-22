@@ -340,66 +340,69 @@
         <p class="section-header">Contact</p>
         <p style="font-size:2em;">
           To make an order or inquiries, please get in touch with us.<br>
-          We would love to hear from you.<br>
+          We would love to hear from you.<br><br>
           
         </p>
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="max-width:1000px; margin-left:auto; margin-right: auto;">
-            <div class="panel panel-default">
-              <p class="section-header"></p>
-              <div class="formContainer" style="max-width: 1000px;">
-                <div class="panel-body">
-                  <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                      <label for="inputName" class="col-sm-2 control-label">Name</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputName" placeholder="Name">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-                      <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone number">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputTitle" class="col-sm-2 control-label">Title</label>
-                      <div class="col-sm-10">
-                        <input type="title" class="form-control" id="inputTitle" placeholder="Message title">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="inputMessage" class="col-sm-2 control-label">Message</label>
-                      <div class="col-sm-10">
-                        <textarea class="form-control" id="inputMessage" placeholder="Your message here" rows="4"></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Submit</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+          <!-- start row -->
+          <div class="row">
+            <!-- start form -->
+            <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1" style="font-size: 1.2em; text-align:left; padding-right: 40px; padding-left: 40px; margin-top:3em;">
+              <div class="formContainer">
+                <form class="" role="form">
+                  <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPhone">Phone</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone number">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputTitle">Title</label>
+                    <input type="title" class="form-control" id="inputTitle" placeholder="Message title">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea class="form-control" id="inputMessage" placeholder="Your message here" rows="5"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn submit-btn">SUBMIT</button>
+                  </div>
+                </form>
+                <br><br>
               </div>
             </div>
+            <!-- end form -->
+            <!-- start contact -->
+            <div class="col-lg-4 col-md-4 nexa-regular" style="text-align: left; margin-top: 2em;">
+              <div class="contact_info">
+                <p style="font-size:1em;">
+                  <img src="img/logo_mockup.png" height="30px"></img><br><br><br>
+                  <span class="nexa-bold">FIBERPRINT OFFICE</span><br><br>
+                  19B Jalan PPZ1,<br> Pusat Perniagaan Zamrud,<br> 08000 Sungai Petani,<br> Kedah, Malaysia<br>
+                  <br><br>
+                  <span class="nexa-bold">Office</span><br>
+                  +604 584 9764 <br><br>
+                  <span class="nexa-bold">Fax</span><br>
+                  +604 584 9764 <br><br>
+                  <span class="nexa-bold">Mobile &amp; Whatsapp</span><br>
+                  +6012 584 9764 <br><br>
+                  <span class="nexa-bold">Email</span><br>
+                  sales@fiberprint.com.my<br><br>
+                  <span class="nexa-bold">Operating Hours</span><br>
+                  9.00am - 5.45pm<br>
+                  Closed on Sunday and Public Holidays<br>
+                  (*For urgent orders please call our mobile number)
+                </p>
+              </div>
+            </div>
+            <!-- end contact -->
           </div>
-          <!-- end panel -->
-
-        <p style="font-size:1.3em;">
-          <img src="img/logo_mockup.png" height="30px"></img><br><br>
-          19B Jalan PPZ1, Pusat Perniagaan Zamrud, 08000 Sungai Petani, Kedah, Malaysia<br><br>
-          <table style="margin-left:auto; margin-right:auto;">
-            <tr><td>Office</td><td>+604 584 9764</td></tr>
-            <tr><td>Fax</td><td>+604 584 9764</td></tr>
-            <tr><td>Mobile &amp; Whatsapp</td><td>+6012 584 9764</td></tr>
-          </table>
-        </p>
+          <!-- end row -->
         <br><br>
       </div>
       <div class="section faq">
@@ -491,7 +494,7 @@
           }, 1000);
         });
         
-
+        //set change interval in milliseconds
         $('.carousel').carousel({
           interval: 4000
         });

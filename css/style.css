@@ -228,6 +228,18 @@ li.collapse-link{
   border: none;
 }
 
+.contact_info{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.submit-btn{
+  border-radius: 0;
+  background-color: #666;
+  color: #FFF;
+}
+
 .footer{
   width:100%;
   height: 150px;
@@ -279,6 +291,10 @@ li.collapse-link{
 @media(max-width: 1024px){
   .download-image-caption{
     font-size: 2em;
+  }
+
+  .contact_info{
+    width: 50%;
   }
 }
 
