@@ -271,22 +271,29 @@
       <div class="section download">
         <p class="section-header">Download<br><br></p>
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <p class="download-title">T-shirt Templates</p>
-            <p>
-              <a href="www.vulpes.pw" class="btn btn-primary" style="margin-right:1em;">Mens <i class="fa fa-cloud-download"></i></a>
-              <a href="www.vulpes.pw" class="btn btn-primary" style="margin-right:1em;">Ladies <i class="fa fa-cloud-download"></i></a> 
-              <a href="www.vulpes.pw" class="btn btn-primary" style="margin-right:1em;">Kids <i class="fa fa-cloud-download"></i></a>
-            </p>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <p class="download-title">T-shirt Styles &amp; Colours Brochure</p>
-            <p>
-              <a href="www.vulpes.pw" class="btn btn-danger" style="margin-right:1em;">Mens <i class="fa fa-cloud-download"></i></a>
-              <a href="www.vulpes.pw" class="btn btn-danger" style="margin-right:1em;">Ladies <i class="fa fa-cloud-download"></i></a> 
-              <a href="www.vulpes.pw" class="btn btn-danger" style="margin-right:1em;">Kids <i class="fa fa-cloud-download"></i></a>
-            </p>
-            <br><br><br>
+          <div class="download-image-box">
+            <div class="col-lg-2 col-sm-1 col-xs-0">
+            </div>
+            <div class="col-lg-8 col-sm-10 col-xs-12">
+              <div class="col-lg-5 col-lg-offset-0 col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1 download-image">
+                <a href="http://kitsunechan.com">
+                  <p class="download-image-caption nexa-bold"> T-shirt <br> Styles &amp; <br> Colours <br> Brochure <br><br>
+                    <span class="nexa-light" style="font-size: 0.4em;">Click to Download</span>
+                  </p>
+                  <img src="img/download1.png"></img>
+                </a>
+              </div>
+              <div class="col-lg-2 col-sm-2 col-xs-1">
+              </div>
+              <div class="col-lg-5 col-lg-offset-0 col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1 download-image">
+                <a href="http://kitsunechan.com">
+                  <p class="download-image-caption nexa-bold"> T-shirt <br> Templates <br> Mens, Ladies <br> &amp; Youth <br><br>
+                    <span class="nexa-light" style="font-size: 0.4em;">Click to Download</span>
+                  </p>
+                  <img src="img/download1.png"></img>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -483,7 +490,12 @@
             scrollTop: $("." + scrollLocation).offset().top - 70
           }, 1000);
         });
-  
+        
+
+        $('.carousel').carousel({
+          interval: 4000
+        });
+
         $(".panel-default").on("click",".panel-heading", function(){
           var isCollapsed = $(this).hasClass('collapsed');
           if(isCollapsed)
@@ -496,12 +508,12 @@
           }
         });
     
-            var instanceC = $( '.gallery-image-box a' ).imageLightbox({
-              onStart:    function() { overlayOn(); closeButtonOn(instanceC); },
-              onEnd:      function() { overlayOff(); closeButtonOff(); },
-              quitOnEnd:  true,
-              quitOnImgClick: true
-            });
+        var instanceC = $( '.gallery-image-box a' ).imageLightbox({
+          onStart:    function() { overlayOn(); closeButtonOn(instanceC); },
+          onEnd:      function() { overlayOff(); closeButtonOff(); },
+          quitOnEnd:  true,
+          quitOnImgClick: true
+        });
 
       });
       /*$('.section').waypoint(function() {
